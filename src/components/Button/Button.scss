@@ -1,0 +1,20 @@
+.button {
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 0;
+  cursor: pointer;
+  background-color: $colorBtn;
+  color: whitesmoke;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: box-shadow 0.25s ease;
+  font-family: $fontPrimary;
+
+  &:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+}

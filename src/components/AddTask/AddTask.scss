@@ -1,0 +1,33 @@
+.add-task {
+  margin-bottom: 2rem;
+
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .add-input {
+    flex: 1;
+    padding: 1rem;
+    background-color: whitesmoke;
+    border: 0;
+    border-radius: 0.75rem;
+    font-family: $fontPrimary;
+
+    &:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .add-task {
+    form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  }
+}

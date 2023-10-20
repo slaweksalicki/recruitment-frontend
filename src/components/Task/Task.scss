@@ -1,0 +1,89 @@
+.task {
+  padding: 1rem;
+  background-color: whitesmoke;
+  border: 0;
+  border-radius: 0.75rem;
+  font-family: $fontPrimary;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+
+  svg {
+    cursor: pointer;
+  }
+
+  .task-status {
+    display: flex;
+    
+    .task-notdone {
+      color: #999;
+
+      &:hover {
+        color: green;
+      }
+    }
+  
+    .task-done {
+      color: green;
+    }
+  }
+
+  .task-text {
+    flex: 1;
+  }
+
+  .linethrough {
+    text-decoration: line-through;
+    color: #aeaeae;
+  }
+
+  .task-delete {
+    color: crimson;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      animation: spin 0.2s linear; 
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.task-enter {
+  animation: slideInFromTop 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+.task-exit {
+  animation: fadeOut 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
